@@ -1,4 +1,4 @@
-# [Nome do Projeto]
+# Prefeito IA
 
 **Disciplina:** Introdução à Inteligência Artificial  
 **Semestre:** 2026.2  
