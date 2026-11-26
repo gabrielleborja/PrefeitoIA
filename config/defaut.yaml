@@ -1,0 +1,38 @@
+# Doença 
+beta0: 0.2                  # β₀  taxa padrão de contágio
+acoplamento_fome: 1.0       # c   quanto a fome aumenta o contágio
+contagio_vizinhos: 0.1      # α   peso do contágio vindo dos vizinhos
+duracao_imunidade: 5        # T_imune  turnos de imunidade após a cura
+p_notif_min: 0.3            # p_min  notificação longe de qualquer posto
+p_notif_max: 0.9            # p_max  notificação com posto na região
+decaimento_notif: 0.01      # L   quanto maior, mais rápido a notificação cai com a distância
+
+# fome 
+cresc_fome: 0.15            # r   crescimento logístico da fome
+pessoas_por_cesta: 3        # k   pessoas alimentadas por cesta
+fome_retorno: 0.05          # s   nível com que a fome voolta quando a segurança acaba
+duracao_seguranca: 3        # T_seg      turnos de segurança por entrega, sem depósito
+duracao_seguranca_dep: 6    # T_seg_dep  turnos de segurança por entrega, com depósito
+
+# Orçamento e construções
+saldo_inicial: 50000.0
+arrecadacao_base: 40000.0   # A_base  arrecadação com caos zero
+peso_fome: 0.5              # w_f  peso da fome no caos
+peso_saude: 0.5             # w_d  peso da doença no caos
+preco_cesta: 1.0            # p_c
+preco_med: 2.0              # p_r
+custo_km: 5.0               # p_km
+base_obra: 20000.0          # parte fixa do custo da obra
+obra_por_hab: 0.5           # c_pop  parte do custo da obra por habitante da região
+base_manut: 500.0           # parte fixa da manutenção por turno
+manut_por_hab: 0.02         # m_pop  parte da manutenção por habitante da região
+
+# Critérios de perda
+fome_max: 0.4               # f_max  fome média da cidade que causa derrota
+infectados_max: 10000.0     # i_max  infectados reais que causam derrota
+turnos_max: 52              # T_max
+
+# Início
+bairros_infectados_iniciais: 8  # quantos bairros começam com infectados
+infectados_iniciais_max: 0.15    # fração máxima da população infectada nesses bairros
+fome_inicial_max: 0.3            # fome inicial sorteada entre 0 e este valor
